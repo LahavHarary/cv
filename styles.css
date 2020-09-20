@@ -1,4 +1,6 @@
 
+ /*********** Tags ***********/
+
 body{
     color:#40514E;
     margin:0;
@@ -31,10 +33,6 @@ h3{
     font-family: 'Montserrat', sans-serif;
 }
 
-p{
-    line-height:1.5;
-}
-
 hr{
     border-color: #DC143C;
     border-style: dotted none none;
@@ -43,340 +41,329 @@ hr{
     margin: 50px auto auto auto;
 }
 
+p{
+  line-height:1.5;
+}
 
-/* Class */
+ /*********** Class ***********/
 
+ /*Top*/
 .top-container{
     background-color: black;
     position: relative;
     padding-top:100px;
 }
 
+.pro{
+  color: #DC143C;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*fire animation*/
+
+@keyframes scaleUpDown {
+  0%,
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50%,
+  90% {
+    transform: scaleY(1.1);
+  }
+  75% {
+    transform: scaleY(0.95);
+  }
+  80% {
+    transform: scaleX(0.95);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: skewX(0) scale(1);
+  }
+  50% {
+    transform: skewX(5deg) scale(0.9);
+  }
+}
+
+@keyframes particleUp {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: -100%;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    background-color: #ef5a00;
+  }
+  50% {
+    background-color: #ff7800;
+  }
+}
+
+.fire {
+  position: absolute;
+  bottom: calc(50% - 70px);
+  right: calc(50% - 310px);
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fire-main {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: scaleUpDown 3s ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.fire-main .main-fire {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(farthest-corner at 10px 0, #d43300 0%, #ef5a00 95%);
+  transform: scaleX(0.8) rotate(45deg);
+  border-radius: 0 40% 60% 40%;
+  filter: drop-shadow(0 0 10px #d43322);
+}
+
+.fire-main .particle-fire {
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  width: 10px;
+  height: 10px;
+  background-color: #ef5a00;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px #d43322);
+  animation: particleUp 2s ease-out 0;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.fire-right {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  animation: shake 2s ease-out 0;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.fire-right .main-fire {
+  position: absolute;
+  top: 15%;
+  right: -25%;
+  width: 80%;
+  height: 80%;
+  background-color: #ef5a00;
+  transform: scaleX(0.8) rotate(45deg);
+  border-radius: 0 40% 60% 40%;
+  filter: drop-shadow(0 0 10px #d43322);
+}
+
+.fire-right .particle-fire {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: #ef5a00;
+  transform: scaleX(0.8) rotate(45deg);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px #d43322);
+  animation: particleUp 2s ease-out 0;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.fire-left {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: shake 3s ease-out 0;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.fire-left .main-fire {
+  position: absolute;
+  top: 15%;
+  left: -20%;
+  width: 80%;
+  height: 80%;
+  background-color: #ef5a00;
+  transform: scaleX(0.8) rotate(45deg);
+  border-radius: 0 40% 60% 40%;
+  filter: drop-shadow(0 0 10px #d43322);
+}
+
+.fire-left .particle-fire {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  width: 10%;
+  height: 10%;
+  background-color: #ef5a00;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px #d43322);
+  animation: particleUp 3s infinite ease-out 0;
+  animation-fill-mode: both;
+}
+
+.fire-bottom .main-fire {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 75%;
+  height: 75%;
+  background-color: #ff7800;
+  transform: scaleX(0.8) rotate(45deg);
+  border-radius: 0 40% 100% 40%;
+  filter: blur(10px);
+  animation: glow 2s ease-out 0;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+
+/*Mid*/
 .middle-container{
     margin:100px 0;
 }
- 
 
+.intro{
+  width:45%;
+  margin:auto;
+}
+ 
+.list-inline-item {
+  display: inline-block;
+  font-size: 4rem 
+}
+
+.Autodidact{
+  float:left;
+  margin-right:30px;
+  margin-top:10px;
+}
+
+.team-player{
+  float:left;
+  margin-right:30px;
+}
+
+
+.coding-skills{
+  margin-left:5px;
+} 
+
+.skill-row{
+  width:40%;
+  margin:30px auto 30px auto;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.projects{
+  width:40%;
+  margin:30px auto 30px auto;
+  text-align: left;
+  font-size: 1.5rem; 
+}
+
+  .projects-show{
+    width:40%;
+    margin:30px auto 30px auto;
+    text-align: left;
+    font-size: 1.5rem;
+ }
+
+  .check-fire{
+    display: block;
+ }
+
+ .fire-img{
+   height:40px;
+   width:40px;
+   float: right;
+   margin-right: 95%;
+ }
+
+ .work-experience{
+  width:40%;
+  margin:30px auto 30px auto;
+  text-align: left;
+  font-size: 1.5rem;
+ }
+
+/*Bot*/
 .bottom-container{
     background-color:black;
     padding: 50px 0 20px;
 }
 
-.pro{
-    color: #DC143C;
+.footer-link{
+  display: inline-block;
+  font-size: 4rem
 }
 
-.intro{
-    width:25%;
-    margin:auto;
-}
-
-
-.top-cloud{
-
-    position:absolute;
-    right:300px;
-    top:40px;
- 
-}
-
-.bottom-cloud{
-
-    position:absolute;
-    left:250px;
-    bottom: 300px;
-}
-
-.list-inline-item {
-    display: inline-block;
-    font-size: 4rem 
-}
-
-  .footer-link{
-    display: inline-block;
-    font-size: 4rem
-  }
-
-  .footer-link, .footer-link:visited {
-    color: inherit;
-    margin: 10px;
+.footer-link, .footer-link:visited {
+  color: inherit;
+  margin: 10px;
 }
 
 .footer-link:hover{
-  color: #ef4400;
-  }
+color: #ef4400;
+}
 
- .skill-row{
-       width:40%;
-       margin:30px auto 30px auto;
-       text-align: left;
-       font-size: 1.5rem;
-    }
+.contact-message{
+  width:40%;
+  margin:40px auto 40px auto;
+}
 
-    .Autodidact{
-        float:left;
-        margin-right:30px;
-        margin-top:10px;
-    }
-    
-    .team-player{
-        float:left;
-        margin-right:30px;
-    }
+.copyright{
+  color: #ff7800;
+  font-size: 0.75rem;
+  padding: 20px 0;
+}
 
-    .coding-skills{
-        margin-left:5px;
-    }
+.download-cv{
+  background:    #f67a00;
+  border:        2px solid #000000;
+  border-radius: 11px;
+  width:         200px;
+  height:        50px;
+  color:         #f9cb9c;
+  display:       inline-block;
+  font:          normal bold 24px/50px "Open Sans", sans-serif;
+  text-align:    center;
+}
 
-    .contact-message{
-        width:40%;
-        margin:40px auto 40px auto;
-    }
 
-    .copyright{
-        color: #ff7800;
-        font-size: 0.75rem;
-        padding: 20px 0;
-    }
-   
-    * {
-        box-sizing: border-box;
-      }
-      
+      /***********ID's***********/
 
-      @keyframes scaleUpDown {
-        0%,
-        100% {
-          transform: scaleY(1) scaleX(1);
-        }
-        50%,
-        90% {
-          transform: scaleY(1.1);
-        }
-        75% {
-          transform: scaleY(0.95);
-        }
-        80% {
-          transform: scaleX(0.95);
-        }
-      }
-      
-      @keyframes shake {
-        0%,
-        100% {
-          transform: skewX(0) scale(1);
-        }
-        50% {
-          transform: skewX(5deg) scale(0.9);
-        }
-      }
-      
-      @keyframes particleUp {
-        0% {
-          opacity: 0;
-        }
-        20% {
-          opacity: 1;
-        }
-        80% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 0;
-          top: -100%;
-          transform: scale(0.5);
-        }
-      }
-      
-      @keyframes glow {
-        0%,
-        100% {
-          background-color: #ef5a00;
-        }
-        50% {
-          background-color: #ff7800;
-        }
-      }
-      
-      .fire {
-        position: absolute;
-        bottom: calc(50% - 70px);
-        right: calc(50% - 310px);
-        width: 100px;
-        height: 100px;
-        background-color: transparent;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      
-      .fire-main {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        animation: scaleUpDown 3s ease-out;
-        animation-iteration-count: infinite;
-        animation-fill-mode: both;
-      }
-      
-      .fire-main .main-fire {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-image: radial-gradient(farthest-corner at 10px 0, #d43300 0%, #ef5a00 95%);
-        transform: scaleX(0.8) rotate(45deg);
-        border-radius: 0 40% 60% 40%;
-        filter: drop-shadow(0 0 10px #d43322);
-      }
-      
-      .fire-main .particle-fire {
-        position: absolute;
-        top: 60%;
-        left: 45%;
-        width: 10px;
-        height: 10px;
-        background-color: #ef5a00;
-        border-radius: 50%;
-        filter: drop-shadow(0 0 10px #d43322);
-        animation: particleUp 2s ease-out 0;
-        animation-iteration-count: infinite;
-        animation-fill-mode: both;
-      }
-      
-      .fire-right {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        animation: shake 2s ease-out 0;
-        animation-iteration-count: infinite;
-        animation-fill-mode: both;
-      }
-      
-      .fire-right .main-fire {
-        position: absolute;
-        top: 15%;
-        right: -25%;
-        width: 80%;
-        height: 80%;
-        background-color: #ef5a00;
-        transform: scaleX(0.8) rotate(45deg);
-        border-radius: 0 40% 60% 40%;
-        filter: drop-shadow(0 0 10px #d43322);
-      }
-      
-      .fire-right .particle-fire {
-        position: absolute;
-        top: 45%;
-        left: 50%;
-        width: 15px;
-        height: 15px;
-        background-color: #ef5a00;
-        transform: scaleX(0.8) rotate(45deg);
-        border-radius: 50%;
-        filter: drop-shadow(0 0 10px #d43322);
-        animation: particleUp 2s ease-out 0;
-        animation-iteration-count: infinite;
-        animation-fill-mode: both;
-      }
-      
-      .fire-left {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        animation: shake 3s ease-out 0;
-        animation-iteration-count: infinite;
-        animation-fill-mode: both;
-      }
-      
-      .fire-left .main-fire {
-        position: absolute;
-        top: 15%;
-        left: -20%;
-        width: 80%;
-        height: 80%;
-        background-color: #ef5a00;
-        transform: scaleX(0.8) rotate(45deg);
-        border-radius: 0 40% 60% 40%;
-        filter: drop-shadow(0 0 10px #d43322);
-      }
-      
-      .fire-left .particle-fire {
-        position: absolute;
-        top: 10%;
-        left: 20%;
-        width: 10%;
-        height: 10%;
-        background-color: #ef5a00;
-        border-radius: 50%;
-        filter: drop-shadow(0 0 10px #d43322);
-        animation: particleUp 3s infinite ease-out 0;
-        animation-fill-mode: both;
-      }
-      
-      .fire-bottom .main-fire {
-        position: absolute;
-        top: 30%;
-        left: 20%;
-        width: 75%;
-        height: 75%;
-        background-color: #ff7800;
-        transform: scaleX(0.8) rotate(45deg);
-        border-radius: 0 40% 100% 40%;
-        filter: blur(10px);
-        animation: glow 2s ease-out 0;
-        animation-iteration-count: infinite;
-        animation-fill-mode: both;
-      }
-
-      .download-cv{
-        background:    #f67a00;
-        border:        2px solid #000000;
-        border-radius: 11px;
-        width:         200px;
-        height:        50px;
-        color:         #f9cb9c;
-        display:       inline-block;
-        font:          normal bold 24px/50px "Open Sans", sans-serif;
-        text-align:    center;
-      }
-
-      .fire-projects{
-      width: 2%;
-      height:3%;      
-      float:left;
-      }
-
-      .fire-skills{
-        width: 4%;
-        height:3%;      
-        float:left;
-        }
-
-      .projects-show{
-        width:40%;
-        margin:30px auto 30px auto;
-        text-align: left;
-        font-size: 1.5rem;
-      }
-
-      #first-fire{
-        margin-left:27%;
-        margin-top: -0.5%;
-      }
-
-      #second-fire{
-        margin-left:27%;
-        margin-top: -0.5%;
-      }
-
-      #third-fire{
-        margin-right: -3.5%;
-        margin-top: -3.5%;
-       } 
-
-      #fourth-fire{
-       margin-left: -0.7%;
-        margin-top: 0%;
-       }
 
      
      
