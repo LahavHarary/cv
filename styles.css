@@ -1,0 +1,381 @@
+
+body{
+    color:#40514E;
+    margin:0;
+    text-align:center;
+    font-family: 'Merriweather', serif;
+    font-size:200%;
+    background-color:#111;
+    
+}
+
+h1{
+    color: #ef5a00;
+    margin:50px auto  0  auto;
+    font-family: 'Sacramento', cursive;
+    font-size: 5.625rem;
+    
+}
+
+h2{
+    color: #ef5a00;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight:normal;
+    padding-bottom: 10px;
+    
+}
+
+h3{
+    color:  #ef5a00;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p{
+    line-height:1.5;
+}
+
+hr{
+    border-color: #DC143C;
+    border-style: dotted none none;
+    border-width:10px;
+    width:5%;
+    margin: 50px auto auto auto;
+}
+
+
+/* Class */
+
+.top-container{
+    background-color: black;
+    position: relative;
+    padding-top:100px;
+}
+
+.middle-container{
+    margin:100px 0;
+}
+ 
+
+.bottom-container{
+    background-color:black;
+    padding: 50px 0 20px;
+}
+
+.pro{
+    color: #DC143C;
+}
+
+.intro{
+    width:25%;
+    margin:auto;
+}
+
+
+.top-cloud{
+
+    position:absolute;
+    right:300px;
+    top:40px;
+ 
+}
+
+.bottom-cloud{
+
+    position:absolute;
+    left:250px;
+    bottom: 300px;
+}
+
+.list-inline-item {
+    display: inline-block;
+    font-size: 4rem 
+}
+
+  .footer-link{
+    display: inline-block;
+    font-size: 4rem
+  }
+
+  .footer-link, .footer-link:visited {
+    color: inherit;
+    margin: 10px;
+}
+
+.footer-link:hover{
+  color: #ef4400;
+  }
+
+ .skill-row{
+       width:50%;
+       margin:30px auto 30px auto;
+       text-align: left;
+       font-size: 1.5rem;
+    }
+
+    .Autodidact{
+        float:left;
+        margin-right:30px;
+        margin-top:10px;
+    }
+    
+    .team-player{
+        float:left;
+        margin-right:30px;
+    }
+
+    .coding-skills{
+        margin-left:5px;
+    }
+
+    .contact-message{
+        width:40%;
+        margin:40px auto 40px auto;
+    }
+
+    .copyright{
+        color: #ff7800;
+        font-size: 0.75rem;
+        padding: 20px 0;
+    }
+   
+    * {
+        box-sizing: border-box;
+      }
+      
+
+      @keyframes scaleUpDown {
+        0%,
+        100% {
+          transform: scaleY(1) scaleX(1);
+        }
+        50%,
+        90% {
+          transform: scaleY(1.1);
+        }
+        75% {
+          transform: scaleY(0.95);
+        }
+        80% {
+          transform: scaleX(0.95);
+        }
+      }
+      
+      @keyframes shake {
+        0%,
+        100% {
+          transform: skewX(0) scale(1);
+        }
+        50% {
+          transform: skewX(5deg) scale(0.9);
+        }
+      }
+      
+      @keyframes particleUp {
+        0% {
+          opacity: 0;
+        }
+        20% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          top: -100%;
+          transform: scale(0.5);
+        }
+      }
+      
+      @keyframes glow {
+        0%,
+        100% {
+          background-color: #ef5a00;
+        }
+        50% {
+          background-color: #ff7800;
+        }
+      }
+      
+      .fire {
+        position: absolute;
+        bottom: calc(50% - 70px);
+        right: calc(50% - 310px);
+        width: 100px;
+        height: 100px;
+        background-color: transparent;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .fire-main {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        animation: scaleUpDown 3s ease-out;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+      }
+      
+      .fire-main .main-fire {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(farthest-corner at 10px 0, #d43300 0%, #ef5a00 95%);
+        transform: scaleX(0.8) rotate(45deg);
+        border-radius: 0 40% 60% 40%;
+        filter: drop-shadow(0 0 10px #d43322);
+      }
+      
+      .fire-main .particle-fire {
+        position: absolute;
+        top: 60%;
+        left: 45%;
+        width: 10px;
+        height: 10px;
+        background-color: #ef5a00;
+        border-radius: 50%;
+        filter: drop-shadow(0 0 10px #d43322);
+        animation: particleUp 2s ease-out 0;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+      }
+      
+      .fire-right {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        animation: shake 2s ease-out 0;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+      }
+      
+      .fire-right .main-fire {
+        position: absolute;
+        top: 15%;
+        right: -25%;
+        width: 80%;
+        height: 80%;
+        background-color: #ef5a00;
+        transform: scaleX(0.8) rotate(45deg);
+        border-radius: 0 40% 60% 40%;
+        filter: drop-shadow(0 0 10px #d43322);
+      }
+      
+      .fire-right .particle-fire {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        background-color: #ef5a00;
+        transform: scaleX(0.8) rotate(45deg);
+        border-radius: 50%;
+        filter: drop-shadow(0 0 10px #d43322);
+        animation: particleUp 2s ease-out 0;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+      }
+      
+      .fire-left {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        animation: shake 3s ease-out 0;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+      }
+      
+      .fire-left .main-fire {
+        position: absolute;
+        top: 15%;
+        left: -20%;
+        width: 80%;
+        height: 80%;
+        background-color: #ef5a00;
+        transform: scaleX(0.8) rotate(45deg);
+        border-radius: 0 40% 60% 40%;
+        filter: drop-shadow(0 0 10px #d43322);
+      }
+      
+      .fire-left .particle-fire {
+        position: absolute;
+        top: 10%;
+        left: 20%;
+        width: 10%;
+        height: 10%;
+        background-color: #ef5a00;
+        border-radius: 50%;
+        filter: drop-shadow(0 0 10px #d43322);
+        animation: particleUp 3s infinite ease-out 0;
+        animation-fill-mode: both;
+      }
+      
+      .fire-bottom .main-fire {
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        width: 75%;
+        height: 75%;
+        background-color: #ff7800;
+        transform: scaleX(0.8) rotate(45deg);
+        border-radius: 0 40% 100% 40%;
+        filter: blur(10px);
+        animation: glow 2s ease-out 0;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+      }
+
+      .download-cv{
+        background:    #f67a00;
+        border:        2px solid #000000;
+        border-radius: 11px;
+        width:         200px;
+        height:        50px;
+        color:         #f9cb9c;
+        display:       inline-block;
+        font:          normal bold 24px/50px "Open Sans", sans-serif;
+        text-align:    center;
+      }
+
+      .fire-skills{
+      width: 45px;
+      height:45px;      
+      float:left;
+      }
+
+      .projects-show{
+        width:50%;
+        margin:30px auto 30px auto;
+        text-align: left;
+        font-size: 1.5rem;
+      }
+
+
+      #first-fire{
+        margin-left:500px;
+        margin-top: -10px;
+      }
+
+      #second-fire{
+        margin-left:500px;
+        margin-top: -10px;
+      }
+
+      #third-fire{
+        margin-right:10px;
+        margin-top:-10px;
+       } 
+
+      #fourth-fire{
+        margin-right:10px;
+        margin-top: 15px;
+       }
+
+     
+     
+
+      
+
+      
