@@ -66,10 +66,6 @@ hr{
     color: #DC143C;
 }
 
-.name{
-  color: #DC143C;
-}
-
 .intro{
     width:25%;
     margin:auto;
@@ -342,3 +338,44 @@ hr{
         font:          normal bold 24px/50px "Open Sans", sans-serif;
         text-align:    center;
       }
+
+      .fire-skills{
+      width: 45px;
+      height:45px;      
+      float:left;
+      }
+
+      .projects-show{
+        width:50%;
+        margin:30px auto 30px auto;
+        text-align: left;
+        font-size: 1.5rem;
+      }
+
+
+      #first-fire{
+        margin-left:500px;
+        margin-top: -10px;
+      }
+
+      #second-fire{
+        margin-left:500px;
+        margin-top: -10px;
+      }
+
+      #third-fire{
+        margin-right:10px;
+        margin-top:-10px;
+       } 
+
+      #fourth-fire{
+        margin-right:10px;
+        margin-top: 15px;
+       }
+
+     
+     
+
+      
+
+      
