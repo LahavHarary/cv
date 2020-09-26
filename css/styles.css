@@ -1,377 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
 
- /*********** Tags ***********/
+/* tag */
 
-body{
-    color:#40514E;
-    margin:0;
-    text-align:center;
-    font-family: 'Merriweather', serif;
-    font-size:200%;
-    background-color:#111;
-    
+
+body {
+  background-color: #f3f5f9;
+  color:black;
+  text-align:left;
+  height: 100%;
 }
 
 h1{
-    color: #ef5a00;
-    margin:50px auto  0  auto;
-    font-family: 'Sacramento', cursive;
-    font-size: 5.625rem;
-    
+  text-align:center;
+  font-size: 70px;
+  margin-left:260px;
 }
-
 h2{
-    color: #ef5a00;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    font-weight:normal;
-    padding-bottom: 10px;
-    
-}
-
-h3{
-    color:  #ef5a00;
-    font-family: 'Montserrat', sans-serif;
-}
-
-h4{
-  color:  crimson;
-  font-family: 'Montserrat', sans-serif;
-}
-
-hr{
-    border-color: #DC143C;
-    border-style: dotted none none;
-    border-width:10px;
-    width:5%;
-    margin: 50px auto auto auto;
+  text-align:center;
+  font-size:40px;
+  margin-left:260px;
 }
 
 p{
-  line-height:1.5;
+  margin-left:260px;
+  text-align:center;
 }
 
- /*********** Class ***********/
+/* class */
 
- /*Top*/
-.top-container{
-    background-color: black;
-    position: relative;
-    padding-top:100px;
+.index{
+  color: whitesmoke;
+  text-align:bottom; 
 }
 
 .pro{
-  color: #DC143C;
+  color: #8080ff;
 }
 
+.Profile-img{
+  
+  height:250px;
+  width: 300px;
+ margin-left:800px;
+}
+
+/*nav bar*/
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-/*fire animation*/
-
-@keyframes scaleUpDown {
-  0%,
-  100% {
-    transform: scaleY(1) scaleX(1);
-  }
-  50%,
-  90% {
-    transform: scaleY(1.1);
-  }
-  75% {
-    transform: scaleY(0.95);
-  }
-  80% {
-    transform: scaleX(0.95);
-  }
+.wrapper {
+  display: flex;
+  position: relative;
 }
 
-@keyframes shake {
-  0%,
-  100% {
-    transform: skewX(0) scale(1);
-  }
-  50% {
-    transform: skewX(5deg) scale(0.9);
-  }
-}
-
-@keyframes particleUp {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    top: -100%;
-    transform: scale(0.5);
-  }
-}
-
-@keyframes glow {
-  0%,
-  100% {
-    background-color: #ef5a00;
-  }
-  50% {
-    background-color: #ff7800;
-  }
-}
-
-.fire {
-  position: absolute;
-  bottom: calc(50% - 70px);
-  right: calc(50% - 310px);
-  width: 100px;
-  height: 100px;
-  background-color: transparent;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.fire-main {
-  position: absolute;
+.wrapper .sidebar {
+  width: 260px;
   height: 100%;
-  width: 100%;
-  animation: scaleUpDown 3s ease-out;
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
+  background: black;
+  padding: 30px 0px;
+  position: fixed;
 }
 
-.fire-main .main-fire {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(farthest-corner at 10px 0, #d43300 0%, #ef5a00 95%);
-  transform: scaleX(0.8) rotate(45deg);
-  border-radius: 0 40% 60% 40%;
-  filter: drop-shadow(0 0 10px #d43322);
+.wrapper .sidebar h3 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.fire-main .particle-fire {
-  position: absolute;
-  top: 60%;
-  left: 45%;
-  width: 10px;
-  height: 10px;
-  background-color: #ef5a00;
-  border-radius: 50%;
-  filter: drop-shadow(0 0 10px #d43322);
-  animation: particleUp 2s ease-out 0;
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
+.wrapper .sidebar ul li {
+  padding: 25px;
+  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.fire-right {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  animation: shake 2s ease-out 0;
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
+.wrapper .sidebar ul li a {
+  color: #fff;
+  display: block;
 }
 
-.fire-right .main-fire {
-  position: absolute;
-  top: 15%;
-  right: -25%;
-  width: 80%;
-  height: 80%;
-  background-color: #ef5a00;
-  transform: scaleX(0.8) rotate(45deg);
-  border-radius: 0 40% 60% 40%;
-  filter: drop-shadow(0 0 10px #d43322);
+.wrapper .sidebar ul li a .fas {
+  width: 25px;
 }
 
-.fire-right .particle-fire {
+.wrapper .sidebar ul li:hover {
+  background-color: blue;
+}
+
+.wrapper .sidebar ul li:hover a {
+  color: #fff;
+}
+
+.wrapper .sidebar .social_media {
   position: absolute;
-  top: 45%;
+  bottom: 0;
   left: 50%;
-  width: 15px;
-  height: 15px;
-  background-color: #ef5a00;
-  transform: scaleX(0.8) rotate(45deg);
-  border-radius: 50%;
-  filter: drop-shadow(0 0 10px #d43322);
-  animation: particleUp 2s ease-out 0;
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
+  transform: translateX(-50%);
+  display: flex;
 }
 
-.fire-left {
-  position: absolute;
-  height: 100%;
+.wrapper .main_content {
   width: 100%;
-  animation: shake 3s ease-out 0;
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
+  margin-left: 200px;
 }
 
-.fire-left .main-fire {
-  position: absolute;
-  top: 15%;
-  left: -20%;
-  width: 80%;
-  height: 80%;
-  background-color: #ef5a00;
-  transform: scaleX(0.8) rotate(45deg);
-  border-radius: 0 40% 60% 40%;
-  filter: drop-shadow(0 0 10px #d43322);
+.wrapper .main_content .header {
+  padding-bottom: 250px;
+  padding-left: 50px;
+  background: #fff;
+  color: blue;
+  border-bottom: 1px solid green;
 }
 
-.fire-left .particle-fire {
-  position: absolute;
-  top: 10%;
-  left: 20%;
-  width: 10%;
-  height: 10%;
-  background-color: #ef5a00;
-  border-radius: 50%;
-  filter: drop-shadow(0 0 10px #d43322);
-  animation: particleUp 3s infinite ease-out 0;
-  animation-fill-mode: both;
+.wrapper .main_content .info {
+  color: #717171;
+  line-height: 25px;
 }
 
-.fire-bottom .main-fire {
-  position: absolute;
-  top: 30%;
-  left: 20%;
-  width: 75%;
-  height: 75%;
-  background-color: #ff7800;
-  transform: scaleX(0.8) rotate(45deg);
-  border-radius: 0 40% 100% 40%;
-  filter: blur(10px);
-  animation: glow 2s ease-out 0;
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
+.wrapper .main_content .info div {
+  margin-bottom: 20px;
 }
 
-
-/*Mid*/
-.middle-container{
-    margin:100px 0;
+@media (max-height: 500px) {
+  .social_media {
+    display: none !important;
+  }
 }
 
-.intro{
-  width:45%;
-  margin:auto;
-}
- 
-.list-inline-item {
-  display: inline-block;
-  font-size: 4rem 
-}
-
-.Autodidact{
-  float:left;
-  margin-right:30px;
-  margin-top:10px;
+/* id */
+/*Images*/
+#background-image {
+  background: url(Prog2.jpg);
+  background-color: #f3f5f9; /* Used if the image is unavailable */
+  height: 907px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 
-.team-player{
-  float:left;
-  margin-right:30px;
-}
-
-
-.coding-skills{
-  margin-left:5px;
-} 
-
-.skill-row{
-  width:40%;
-  margin:30px auto 30px auto;
-  text-align: left;
-  font-size: 1.5rem;
-}
-
-.projects{
-  width:40%;
-  margin:30px auto 30px auto;
-  text-align: left;
-  font-size: 1.5rem; 
-}
-
-  .projects-show{
-    width:40%;
-    margin:30px auto 30px auto;
-    text-align: left;
-    font-size: 1.5rem;
- }
-
-  .check-fire{
-    display: block;
- }
-
- .fire-img{
-   height:40px;
-   width:40px;
-   float: right;
-   margin-right: 96.5%;
- }
-
- .work-experience{
-  width:40%;
-  margin:30px auto 30px auto;
-  text-align: left;
-  font-size: 1.5rem;
- }
-
-/*Bot*/
-.bottom-container{
-    background-color:black;
-    padding: 50px 0 20px;
-}
-
-.footer-link{
-  display: inline-block;
-  font-size: 4rem
-}
-
-.footer-link, .footer-link:visited {
-  color: inherit;
-  margin: 10px;
-}
-
-.footer-link:hover{
-color: #ef4400;
-}
-
-.contact-message{
-  width:40%;
-  margin:40px auto 40px auto;
-}
-
-.copyright{
-  color: #ff7800;
-  font-size: 0.75rem;
-  padding: 20px 0;
-}
-
-.download-cv{
-  background:    #f28504;
-  background:    linear-gradient(#1b0303, #f28504 50%, #1b0303);
-  border-radius: 1000px;
-  padding:       20px 46px;
-  color:         #40514E;
-  display:       inline-block;
-  font:          normal bold 26px/1 "Open Sans", sans-serif;
-  text-align:    center;
-}
-
-
-      /***********ID's***********/
-
-
-     
-     
-
-      
-
-      
