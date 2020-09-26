@@ -16,6 +16,11 @@ body{
 
 /******************************** class /********************************/
 
+.middle-container{
+  margin-left:200px;
+  margin-right:400px;
+}
+
 .bg-img {
 
     /* Sizing */
@@ -42,7 +47,21 @@ body{
 .bg-img h1{
   font-size: 4em;
 }
+.bg-img h2{
+  color: white;
+}
 
+h2{
+  color:darkblue;
+}
+
+hr{
+  border-color: #3366cc;
+  border-style: dotted none none;
+  border-width: 10px;
+  width: 5%;
+  margin: 50px auto auto auto;
+}
 
 
 /* Page content */
@@ -62,15 +81,49 @@ body{
   padding-top: 60px;
 }
 
+.list-inline-item{
+  display: inline-block;
+  font-size: 4rem;
+}
 
+.GitHub{
+  display: inline-block;
+  font-size: 4rem;
+  color: black;
+}
 
+.GitHub :hover{
+  color: #3366cc;
+}
+
+.coding-skills{
+  color: black;
+}
+
+.footer-link{
+  font-size: 4rem;
+  color: black;
+}
+
+.footer-link :hover{
+  display: inline-block;
+  color: #3366cc;
+}
+
+.footer-link :visited{
+  color:black;
+}
+
+.mail{
+  color: black;
+}
 
 /******************************** id /********************************/
 
 /* Style the navbar */
 #navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #3366cc;
 }
 
 /* Navbar links */
@@ -81,4 +134,8 @@ body{
   text-align: center;
   padding: 14px;
   text-decoration: none;
+}
+
+#navbar :hover{
+  background-color: black;
 }
